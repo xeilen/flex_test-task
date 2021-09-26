@@ -1,0 +1,35 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+.container {
+    display: flex;
+}
+
+.block {
+    height: 200px;
+    background-color: #ff9a8d;
+    flex-basis: 100%;
+}
+
+.block:first-child {
+    background-color: #aed6dc;
+    flex: 0 0 200px;
+}
+
+.block:last-child {
+    background-color: #4a536b;
+    flex: 0 0 150px;
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .block,
+    .block:first-child,
+    .block:last-child {
+        flex-basis: 200px;
+    }
+}
